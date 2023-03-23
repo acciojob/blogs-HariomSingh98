@@ -28,7 +28,7 @@ public class BlogService {
         Blog newBlog = new Blog();
         newBlog.setTitle(title);
         newBlog.setContent(content);
-
+        newBlog.setPubDate(new Date());
         newBlog.setUser(user);
 
         user.getBlogList().add(newBlog);//add the new blog in the list
@@ -45,7 +45,7 @@ public class BlogService {
 
         user.getBlogList().remove(blog);//remove the blog from user
 
-        blogRepository1.delete(blog);//delete the blog ,also image will also be deleted for given block
+        blogRepository1.deleteById(blogId);//delete the blog ,also image will also be deleted for given block
 
     }
 }

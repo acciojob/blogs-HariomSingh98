@@ -43,7 +43,7 @@ public class ImageService {
 
         blog.getImageList().remove(image);//remove image from given list
 
-        imageRepository2.delete(image);
+        imageRepository2.deleteById(id);
 
     }
 
@@ -64,6 +64,6 @@ public class ImageService {
         int imageH=Integer.parseInt(image.getDimensions().substring(0,indxOfXinImage));
         int imageW=Integer.parseInt(image.getDimensions().substring(indxOfXinImage+1));
 
-        return (screenH/imageH) * (screenW/imageW); //num of complete images that fit in the screen of given dimensions
+        return (screenH/imageH) * (screenW/imageW); //number of complete images that fit in the screen of given dimensions
     }
 }
