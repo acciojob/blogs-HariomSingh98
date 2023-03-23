@@ -37,11 +37,11 @@ public class ImageService {
 
     public void deleteImage(Integer id){
         //get the image object
-        Image image = imageRepository2.findById(id).get();
-        //get the blog it belongs to
-        Blog blog = blogRepository2.findById(image.getBlog().getId()).get();
-
-        blog.getImageList().remove(image);//remove image from given list
+//        Image image = imageRepository2.findById(id).get();
+//        //get the blog it belongs to
+//        Blog blog = blogRepository2.findById(image.getBlog().getId()).get();
+//
+//        blog.getImageList().remove(image);//remove image from given list
 
         imageRepository2.deleteById(id);
 

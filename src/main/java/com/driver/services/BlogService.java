@@ -40,10 +40,10 @@ public class BlogService {
 
     public void deleteBlog(int blogId){
         //delete blog and corresponding images
-        Blog blog = blogRepository1.findById(blogId).get();//get blog object
-        User user  = userRepository1.findById(blog.getUser().getId()).get();//get user object
-
-        user.getBlogList().remove(blog);//remove the blog from user
+//        Blog blog = blogRepository1.findById(blogId).get();//get blog object
+//        User user  = userRepository1.findById(blog.getUser().getId()).get();//get user object
+//
+//        user.getBlogList().remove(blog);//remove the blog from user
 
         blogRepository1.deleteById(blogId);//delete the blog ,also image will also be deleted for given block
 
